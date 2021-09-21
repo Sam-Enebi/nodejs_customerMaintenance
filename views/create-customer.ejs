@@ -1,0 +1,64 @@
+<body>
+	<h1 style="text-align: center">Create Customer</h1>
+
+	<form action="http://localhost:3000/customer/addCustomer" method="POST">
+			<%- include ("./partials/messages.ejs") %>
+		<table cellpadding="15" style="margin: 5rem auto 0 auto">
+			<tr>
+				<td>
+					<input
+						type="text"
+						name="name"
+						placeholder="Name"
+						style="height: 1.5rem"
+					/>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<input
+						type="text"
+						name="address"
+						placeholder="Address"
+						style="height: 1.5rem"
+					/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input
+						type="text"
+						name="age"
+						placeholder="Age"
+						style="height: 1.5rem"
+					/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input
+						type="text"
+						name="password"
+						placeholder="Password"
+						style="height: 1.5rem"
+					/>
+				</td>
+			</tr>
+
+			<tr>
+				<td width="100px"></td>
+				<td style="color: blue">
+					<input type="submit" value="Create Customer" />
+				</td>
+			</tr>
+		</table>
+	</form>
+	<!-- <a
+		href="http://localhost:3000/product/products"
+		style="margin: 5rem 20rem 0 20rem"
+	>
+		<button>All Products</button>
+	</a> -->
+</body>
+;

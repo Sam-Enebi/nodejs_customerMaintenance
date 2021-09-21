@@ -1,0 +1,25 @@
+<div class="d-flex justify-content-between">
+	<h1 class="mt-4">Delete Customers</h1>
+</div>
+
+<p class="lead mb-3">All Customers</p>
+	<%- include ("./partials/messages.ejs") %>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Name</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% if (customers.length > 0) { %> <% customers.forEach(user => { %>
+		<tr>
+			<td><%= user.name %></td>
+		<td>
+				<a href="/customer/deleteCustomer/<%= user._id %>" class="btn btn-secondary btn-sm">
+					Delete
+				</a>
+			</td>
+		</tr>
+		<% }) %> <% } %>
+	</tbody>
+</table>

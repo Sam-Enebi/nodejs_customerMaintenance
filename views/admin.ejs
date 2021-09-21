@@ -1,0 +1,38 @@
+<div class="d-flex justify-content-between">
+	<h1 class="mt-4">List Customers</h1>
+	<!-- <a href="/auth/logout" class="btn btn-secondary btn-md mt-4">Logout</a> -->
+</div>
+<!-- 
+<a href="/user/register" class="btn btn-primary btn-md my-2"> Add User </a> -->
+<p class="lead mb-3">All Customers</p>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Address</th>
+			<th>Age</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% if (users.length > 0) { %> <% users.forEach(user => { %>
+		<tr>
+			<td><%= user.name %></td>
+			<td><%= user.address %></td>
+			<td><%= user.age %></td>
+			<!-- <td>
+				<a
+					href="/user/update/<%= user._id %> "
+					class="btn btn-secondary btn-sm"
+				>
+					Edit
+				</a>
+			</td>
+			<td>
+				<a href="/auth/delete/<%= user._id %>" class="btn btn-secondary btn-sm">
+					Delete
+				</a>
+			</td> -->
+		</tr>
+		<% }) %> <% } %>
+	</tbody>
+</table>
